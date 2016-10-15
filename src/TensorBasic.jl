@@ -1,8 +1,5 @@
 # --------------module TensorBasic-----------
-# 1. Tensor index is generally 1d int array
-# 2. Merge two 1d array [a;b]
-# 3. [1 2] size == (1,2) 2d array
-# 4. [1,2] 1d array
+# huangrzh@icloud.com
 #---------------------------------------------------
 
 
