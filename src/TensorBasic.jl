@@ -11,16 +11,6 @@ export tensor_product,tensor_permute,tensor_reshape
 
 # Sveral tensor product
 # By Huang Ruizhen, 2016/7/8
-function tensor_product(tensor_tup, indx_tup)
-  tup_no = length(tensor_tup);
-  (outT,outInd) = tensor_product(tensor_tup[1], indx_tup[1], tensor_tup[2], indx_tup[2]);
-  for i=3:1:tup_no
-    (outT,outInd) = tensor_product(outT, outInd, tensor_tup[i], indx_tup[i]);
-  end
-  return outT,outInd;
-end
-
-
 function tensor_product(A, aindex, B, bindex)
   a_length = length( aindex );
   b_length = length( bindex );
@@ -76,7 +66,7 @@ end
 # Tensor permute
 # By Huang Ruizhen, 2016.10.15
 function tensor_permute(T, oldidx, newidx)
-  exchidx = indexin(oldidx, newidx);
+  exchidx = indexin(newidx, oldidx);
   return permutedims(T,exchidx);
 end
 
